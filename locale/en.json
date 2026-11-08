@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Token Cost (CNY)",
+    "description": "Adds this conversation's estimated token spend in CNY after the composer's existing usage information."
+  }
+}

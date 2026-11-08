@@ -1,0 +1,52 @@
+{
+  "name": "@local/dsh-token-cost",
+  "version": "1.0.1",
+  "description": "Shows this conversation's token spend converted to CNY beside the composer's usage information.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anmoku-Yomogi/dsh-convert-token-to-cny.git"
+  },
+  "homepage": "https://github.com/Anmoku-Yomogi/dsh-convert-token-to-cny#readme",
+  "bugs": {
+    "url": "https://github.com/Anmoku-Yomogi/dsh-convert-token-to-cny/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "deepseek",
+    "deepseek-harness",
+    "token",
+    "cost",
+    "cny"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
